@@ -1,1 +1,2 @@
+# Ignore all .pem files (private keys, certificates, etc.)
 *.pem
