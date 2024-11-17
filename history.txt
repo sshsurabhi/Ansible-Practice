@@ -1,0 +1,218 @@
+    1  clr
+    2  cls
+    3  clear
+    4  sudo su - datascientest
+    5  clear
+    6  sudo su - datascientest
+    7  pip list
+    8  git version
+    9  kubectl version
+   10  helm version
+   11  docker version
+   12  ls
+   13  sudo apt update -y
+   14  sudo apt upgrade -y
+   15  sudo apt autoremove -y
+   16  sudo apt autoclean -y
+   17  curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
+   18  sudo apt-get install gitlab-runner
+   19  apt-cache madison gitlab-runner
+   20  sudo gitlab-runner -version
+   21  sudo gitlab-runner status
+   22  cd /home/
+   23  ls
+   24  sudo visudo
+   25  sudo gitlab-runner register  --url https://gitlab.com  --token glrt-t3_o9VrTUKyix1ynvrywYAW
+   26  curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
+   27  kubectl version
+   28  kubectl get nodes
+   29  k3s kubectl get nodes
+   30  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+   31  cd
+   32  curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+   33  ls /home/
+   34  cd
+   35  ls
+   36  chmod 700 get_helm.sh
+   37  ./get_helm.sh 
+   38  sudo usermod -aG docker gitlab-runner
+   39  sudo apt install curl apt-transport-https ca-certificates software-properties-common
+   40  sudo apt install docker.io -y
+   41  clear
+   42  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   43  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   44  sudo apt update
+   45  sudo apt install docker -y
+   46  sudo apt install docker-ce -y
+   47  sudo systemctl status docker
+   48  sudo systemctl start docker
+   49  sudo systemctl status docker
+   50  sudo usermod -aG docker gitlab-runner
+   51  docker version
+   52  sudo docker version
+   53  sudo usermod -aG docker ubuntu
+   54  sudo docker version
+   55  #ocker version
+   56  docker version
+   57  sudo systemctl status docker
+   58  sudo systemctl enable docker
+   59  docker version
+   60  reboot
+   61  docker version
+   62  sudo docker version
+   63  sudo apt-get remove --purge docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   64  sudo rm -rf /var/lib/docker
+   65  sudo rm -rf /var/lib/containerd
+   66  sudo groupdel docker
+   67  sudo apt-get update
+   68  sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+   69  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   70  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   71  sudo apt-get update
+   72  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   73  sudo systemctl enable docker
+   74  sudo systemctl start docker
+   75  sudo systemctl status docker
+   76  docker version
+   77  sudo usermod -aG docker ubuntu
+   78  docker version
+   79  sudo apt-get remove --purge docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   80  sudo rm -rf /var/lib/docker
+   81  sudo rm -rf /var/lib/containerd
+   82  sudo groupdel docker
+   83  sudo apt-get update
+   84  sudo apt upgrade
+   85  sudo apt autoremove
+   86  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+   87  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   88  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   89  sudo apt update
+   90  sudo apt install docker-ce docker-ce-cli containerd.io
+   91  docker version
+   92  sudo usermod -aG docker ubuntu
+   93  docker version
+   94  sudo usermod -aG docker $USER
+   95  docker version
+   96  groups $USER
+   97  groups $user
+   98  groups ubuntu
+   99  sudo usermod -aG docker ubuntu
+  100  sudo systemctl restart docker
+  101  docker version
+  102  sudo chmod 666 /var/run/docker.sock
+  103  docker version
+  104  sudo chmod 660 /var/run/docker.sock
+  105  docker version
+  106  groups ubuntu
+  107  reboot
+  108  docker version
+  109  sudo nano /etc/docker/daemon.json
+  110  sudo systemctl restart docker
+  111  docker version
+  112  clear
+  113  helm repo add gitlab https://charts.gitlab.io
+  114  helm repo update
+  115  helm upgrade --install devops-aws-agent gitlab/gitlab-agent  --namespace gitlab-agent-devops-aws-agent    --create-namespace    --set config.token=glagent-T-zwmuPKxs1iysHe_9AKDi8FnXxTafN49kDiaW7VZ43jSdSLwA  --set config.kasAddress=wss://kas.gitlab.com
+  116  kubectl version
+  117  helm version
+  118  git version
+  119  helm repo update
+  120  helm upgrade --install devops-aws-agent gitlab/gitlab-agent  --namespace gitlab-agent-devops-aws-agent  --create-namespace  --set config.token=glagent-T-zwmuPKxs1iysHe_9AKDi8FnXxTafN49kDiaW7VZ43jSdSLwA  --set config.kasAddress=wss://kas.gitlab.com
+  121  kubectl config current-context
+  122  ubuntu@ip-172-16-1-25:~$ kubectl config current-context
+  123  default
+  124  kubectl config get-contexts
+  125  kubectl config use-context default
+  126  export KUBECONFIG=/path/to/your/kubeconfig
+  127  kubectl config get-contexts
+  128  helm upgrade --install devops-aws-agent gitlab/gitlab-agent  --namespace gitlab-agent-devops-aws-agent  --create-namespace  --set config.token=glagent-T-zwmuPKxs1iysHe_9AKDi8FnXxTafN49kDiaW7VZ43jSdSLwA  --set config.kasAddress=wss://kas.gitlab.com
+  129  kubectl config get-contexts
+  130  kubectl config current-context
+  131  ls ~/.kube/config
+  132  export KUBECONFIG=/path/to/your/kubeconfig
+  133  kubectl config get-contexts
+  134  kubectl config current-context
+  135  kubectl get nodes
+  136  ls -l /etc/rancher/k3s/k3s.yaml
+  137  sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+  138  sudo chown $(whoami) /etc/rancher/k3s/k3s.yaml
+  139  sudo k3s server --write-kubeconfig-mode 644
+  140  sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+  141  sudo chown $(whoami) ~/.kube/config
+  142  export KUBECONFIG=~/.kube/config
+  143  kubectl version
+  144  kubectl config current-context
+  145  kubectl get nodes
+  146  helm repo add gitlab https://charts.gitlab.io
+  147  helm repo update
+  148  helm upgrade --install devops-aws-agent gitlab/gitlab-agent  --namespace gitlab-agent-devops-aws-agent  --create-namespace  --set config.token=glagent-T-zwmuPKxs1iysHe_9AKDi8FnXxTafN49kDiaW7VZ43jSdSLwA  --set config.kasAddress=wss://kas.gitlab.com
+  149  ssh-keygen
+  150  cat ~/.ssh/id_rsa.pub
+  151  cat ~/.ssh/id_ed25519.pub
+  152  git clone https://gitlab.com/SaiSriHarsha/devops-gitlab.git
+  153  git status
+  154  cd devops-gitlab/
+  155  git status
+  156  git clone https://gitlab.com/SaiSriHarsha/gitlab-devops.git
+  157  rm -rf gitlab-devops/
+  158  cd
+  159  git clone https://gitlab.com/SaiSriHarsha/gitlab-devops.git
+  160  cd devops-gitlab/
+  161  'C:\Users\surab\Downloads\gitlab-devops\gitlab-task'
+  162  helm create gielab-task
+  163  helm delete gielab-task
+  164  kubectl version
+  165  helm create gitlab-task
+  166  cat ~/.docker/config.json
+  167  docker version
+  168  docker login
+  169  docker login -u 'surabhiharsha5' -p 'S_Harsha5'
+  170  cat ~/.docker/config.json
+  171  cat ~/.docker/config.json > config.json
+  172  kubectl create secret generic regcred   --from-file=.dockerconfigjson=config.json   --type=kubernetes.io/dockerconfigjson -n dev
+  173  kubectl create namespace dev
+  174  docker version
+  175  kubectl version
+  176  kubectl create namespace dev
+  177  df -h
+  178  sudo systemctl status k3s
+  179  kubectl get nodes --request-timeout=30s
+  180  cd /home/ubuntu/devops-gitlab/
+  181  ls
+  182  ls
+  183  kubectl get nodes --request-timeout=30s
+  184  kubectl version
+  185  kubectl create namespace dev
+  186  kubectl config view --raw > ~/.kube/config 
+  187  chmod 700 .kube/config
+  188  cat ~/.docker/config.json
+  189  cd /home/gitlab-runner/
+  190  sudo ls /home/gitlab-runner/
+  191  kubectl create secret generic regcred    --from-file=.dockerconfigjson=config.json    --type=kubernetes.io/dockerconfigjson -n dev
+  192  cat ~/.docker/config.json > config.json
+  193  kubectl create secret generic regcred    --from-file=.dockerconfigjson=config.json    --type=kubernetes.io/dockerconfigjson -n dev
+  194  kubectl get secret regcred -n dev --output=yaml
+  195  sudo i
+  196  sudo -i
+  197  kubectl get pods -n dev
+  198  kubectl version
+  199  kubectl get pods -n dev
+  200  cd devops-gitlab/
+  201  ls
+  202  helm uninstall gitlab-task -n dev
+  203  helm uninstall gitlab-task
+  204  kubectl get pods -n dev
+  205  kubectl get namespaces
+  206  helm uninstall gitlab-task -n dev
+  207  kubectl delete namespace dev
+  208  kubectl get namespaces
+  209  sudo /usr/local/bin/k3s-uninstall.sh
+  210  kubectl get namespaces
+  211  sudo rm /usr/local/bin/helm
+  212  helm version
+  213  rm -f get_helm.sh 
+  214  git version
+  215  docker version
+  216  ls
+  217  rm -f config.json 
+  218  history > history.txt

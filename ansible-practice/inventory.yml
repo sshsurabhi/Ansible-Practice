@@ -1,0 +1,25 @@
+all:
+  children:
+    datascientest_app:
+      children:
+        dev:
+          hosts:
+            client-dev:
+              ansible_host: 172.16.1.217
+              ansible_ssh_private_key_file: /home/ubuntu/Ansible-KeyPair-New.pem
+              ansible_user: ubuntu
+              env: dev
+        prod:
+          hosts:
+            client-prod:
+              ansible_host: 172.16.1.68
+              ansible_ssh_private_key_file: /home/ubuntu/Ansible-KeyPair-New.pem
+              ansible_user: ubuntu
+              env: prod
+        test:
+          hosts:
+            client-test:
+              ansible_host: 172.16.1.148
+              ansible_ssh_private_key_file: /home/ubuntu/Ansible-KeyPair-New.pem
+              ansible_user: ubuntu
+              env: test

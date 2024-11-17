@@ -1,0 +1,35 @@
+- name: Installs apache , copies files to server group webserver
+  hosts: webserver  # corrected to match the inventory group name
+  become: yes  # allow elevation of privileges actions
+  tasks:
+    - name: apache2 installation with privilege elevation
+      apt:  # call the apt module
+        name: apache2
+        state: present
+
+    - name: start apache2 service with service module
+      service:  # call the service module
+        name: apache2  # we want to start the Apache service
+        state: started  # state we want the service in
+        enabled: yes  # we also want the service to be started at server startup
+
+    - name: Install apache, copy files with elevations of privileges
+      copy:  # call the copy module
+        src: index.html  # file to copy from ansible server
+        dest: /var/www/html/index.html  # destination file path
+        mode: "0644"
+
+- name: postgresql installation and service activation
+  hosts: databaseserver  # corrected to match the inventory group name
+  become: yes  # allow elevation of privileges actions
+  tasks:
+    - name: Installing postgresql to the latest version
+      apt:  # call the apt module
+        name: postgresql  # we want to install postgresql with the apt module
+        state: latest  # we want postgresql to be the latest version
+
+    - name: start postgresql service with service module
+      service:  # call the service module
+        name: postgresql  # we want to start the postgresql service
+        state: started  # state we want the service to be in
+        enabled: yes  # we also want the service to be started when the server starts
