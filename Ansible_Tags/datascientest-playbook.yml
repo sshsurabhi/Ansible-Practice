@@ -1,0 +1,48 @@
+- name: Installs apache, Copies files to server group webserver # primary play name
+  hosts: webserver # target groups or hosts to deploy to
+  become: yes # allows to set up actions where we have to elevate our privileges like doing a sudo
+  tasks:
+    - name: apache2 installation with elevated privileges # task name
+      apt: # call the apt module
+        name: apache2
+        state: present
+      tags:
+        - web # add web tag
+
+    - name: start apache2 service with service module # task name
+      service: # calling the service module
+        name: apache2 # we want to start the apache2 service
+        state: started # state we want the service in
+        enabled: yes # we also want the service to be started when the server starts
+      tags:
+        - web # add web tag
+        - always
+
+    - name: Install apache, Copy files with elevations of privileges # task name
+      copy: # call the copy module
+        src: index.php # file to copy from ansible server
+        dest: /var/www/html # directory where the index.php file will be copied to the targets
+        mode: "0644"
+      tags:
+        - web # add web tag
+        - always
+
+- name: PostgreSQL installation and service activation # name of the second play
+  hosts: databaseserver # groups or target hosts on which we will deploy
+  become: yes # allows to set up actions where we have to elevate our privileges like doing a sudo
+  tasks:
+    - name: Installing PostgreSQL to the latest version # task name
+      apt: # call the apt module
+        name: postgresql # we want to install postgresql with the apt module
+        state: latest # we want to install postgresql at the latest version
+      tags:
+        - bd # add db tag
+
+    - name: start PostgreSQL service with service module # name of the task
+      service: # call the service module
+        name: postgresql # we want to start the PostgreSQL service
+        state: started # state we want the service in
+        enabled: yes # we also want the service to be started when the server starts
+      tags:
+        - bd # add db tag
+        - never

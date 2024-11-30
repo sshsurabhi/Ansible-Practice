@@ -1,0 +1,5 @@
+
+
+ansible all -i inventory.yml -m file -a "path=/home/datascientest state=directory owner=ubuntu group=ubuntu mode=0755" -b
+
+ansible all -i inventory.yml -m copy -a "src=datascientest.txt dest=/home/datascientest" -b

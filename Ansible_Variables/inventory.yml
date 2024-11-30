@@ -1,0 +1,17 @@
+all:
+  vars:
+    ansible_ssh_private_key_file: /home/ubuntu/Ansible-Practice/Ansible-KeyPair-New.pem
+    ansible_user: datascientest
+    ansible_password: Datascientest2022
+    ansible_become_pass: Datascientest2022
+
+databaseserver:
+  hosts:
+    serverdatabase1.datascientest.com:
+      ansible_host: 15.236.134.175
+      ansible_user: ubuntu 
+webserver:
+  hosts:
+    serverweb1.datascientest.com:
+      ansible_host: 51.44.97.251
+      ansible_user: ubuntu 

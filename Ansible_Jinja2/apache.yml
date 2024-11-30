@@ -1,0 +1,19 @@
+- name: playbook to install and start the apache package
+  hosts: webserver
+  become: yes
+  vars:
+    serverweb_message: "Datascientest ANSIBLE."
+  tasks:
+    - name: Install apache2 package
+      apt:
+        name: apache2
+        state: present
+    - name: Start httpd service
+      service:
+        name: apache2
+        state: started
+
+    - name: Create index.html using Jinja2
+      template:
+        src: models/index.html.j2
+        dest: /var/www/html/index.html

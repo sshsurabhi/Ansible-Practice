@@ -1,0 +1,106 @@
+- name: wordpress installation
+  hosts: production
+  become: true
+  vars:
+    wp_version: 5.7.1
+    wp_webserver: nginx
+    wp_mysql_db: "datascientest"
+    wp_db_user: "datascientest"
+    wp_mysql_user: "datascientest"
+    wp_mysql_password: "mysql_pass"
+    wp_admin_email: "admin@datascientest.fr"
+    wp_sitename: demo.com
+    wp_install_dir: "/var/www/demo.com"
+    wp_db_name: "datascientest"
+    wp_db_password: "datascientest"
+    wp_db_host: "localhost"
+    wp_db_charset: "utf-8"
+
+  tasks:
+    - name: WordPress - Install php
+      apt:
+        pkg:
+          [
+            "php-pear",
+            "php-fpm",
+            "php-dev",
+            "php-zip",
+            "php-curl",
+            "php-xmlrpc",
+            "php-gd",
+            "php-mysql",
+            "php-mbstring",
+            "php-xml",
+          ]
+        update_cache: yes
+        cache_valid_time: 86400
+        state: present
+
+    - name: WordPress - Install nginx
+      apt:
+        pkg: nginx
+        update_cache: yes
+        cache_valid_time: 86400
+        state: present
+      when: wp_webserver == "nginx"
+
+    - name: Wordpress - Delete items from /var/www/html/
+      file:
+        path: /var/www/html/index.html
+        state: absent
+      when: wp_install_dir == "/var/www/html"
+
+    - name: Wordpress - Create a directory
+      file:
+        path: "{{ wp_install_dir }}"
+        state: directory
+        mode: 0755
+
+    - name: Wordpress - Extract archive to {{ wp_install_dir }}
+      unarchive:
+        src: "https://wordpress.org/wordpress-{{ wp_version }}.tar.gz"
+        dest: "{{ wp_install_dir }}"
+        remote_src: yes
+        validate_certs: no  # Disable SSL verification (not recommended for production)
+
+    - name: Wordpress - Move files from {{ wp_install_dir }}/wordpress to {{ wp_install_dir }}
+      command: cp -rf . "{{ wp_install_dir }}"
+      args:
+        chdir: "{{ wp_install_dir }}/wordpress/"
+
+    - name: Wordpress - Delete wordpress directory
+      file:
+        path: "{{ wp_install_dir }}/wordpress/"
+        state: absent
+
+    - name: Wordpress - Get random salts for wp-config.php
+      delegate_to: localhost
+      uri:
+        url: https://api.wordpress.org/secret-key/1.1/salt/
+        return_content: yes
+      become: False
+      register: "wp_salt_array"
+
+    - name: definition of facts wp_salt
+      set_fact:
+        wp_salt: "{{ wp_salt_array.content }}"
+
+    - name: Wordpress Copy file wp-config.php
+      template:
+        src: modeles/wp-config.php.j2
+        dest: "{{ wp_install_dir }}/wp-config.php"
+
+    - name: Wordpress - Change the owner of the installation directory
+      file:
+        path: "{{ wp_install_dir }}"
+        owner: www-data
+        group: www-data
+        state: directory
+        recurse: yes
+
+- name: Install wordpress
+  import_playbook: wordpress.yml
+- name: mysql
+  import_playbook: mysql.yml
+- name: nginx
+  import_playbook: nginx.yml
