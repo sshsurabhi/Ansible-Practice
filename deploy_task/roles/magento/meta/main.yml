@@ -1,0 +1,21 @@
+galaxy_info:
+  role_name: magento
+  namespace: my_namespace  # Replace with your own namespace
+  author: your_name         # Replace with your name
+  description: Magento role for deployment
+  company: Your Company Name
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+    - name: Debian
+      versions:
+        - 10
+        - 11
+  categories:
+    - web
+
+dependencies: []

@@ -1,0 +1,1000 @@
+ 1051  docker ps
+ 1052  docker ps -a
+ 1053  docker-compose up -d
+ 1054  docker-compose down
+ 1055  docker-compose up -d
+ 1056  docker stop my_mongo
+ 1057  docker-compose up -d
+ 1058  docker stop my_mongo
+ 1059  docker rm my_mongo
+ 1060  sudo rm -rf sample_training
+ 1061  mkdir sample_training
+ 1062  cd sample_training
+ 1063  sudo wget https://dst-de.s3.eu-west-3.amazonaws.com/mongo_fr/books.json
+ 1064  docker-compose up -d
+ 1065  docker exec -it my_mongo bash
+ 1066  cd ..
+ 1067  python3 mongodb_task.py 
+ 1068  python3 mongodb_task.py > res.txt
+ 1069  git status
+ 1070  python3 mongodb-connection.py > result_.txt
+ 1071  nano .gitignore
+ 1072  git status
+ 1073  cd sampl
+ 1074  cd sample_training/
+ 1075  sudo wget https://dst-de.s3.eu-west-3.amazonaws.com/mongo_fr/companies.json
+ 1076  sudo wget https://dst-de.s3.eu-west-3.amazonaws.com/mongo_fr/grades.json
+ 1077  sudo wget https://dst-de.s3.eu-west-3.amazonaws.com/mongo_fr/zips.json
+ 1078  git status
+ 1079  cd ..
+ 1080  git status
+ 1081  git add .
+ 1082  git rm --cached sample_training/
+ 1083  git rm --cached s -r sample_training/
+ 1084  git rm --cached -r sample_training/
+ 1085  git add .
+ 1086  sudo chown -R ubuntu:ubuntu sample_training/
+ 1087  sudo chmod -R u+w sample_training/
+ 1088  git add .
+ 1089  git commit -m ".gitignore file has been added"
+ 1090  git push  origin master
+ 1091  git rm --cached -r sample_training/
+ 1092  git status
+ 1093  git add .
+ 1094  git status
+ 1095  git commit -m "codes modifed and simpled the implementation"
+ 1096  history > history.txt
+ 1097  git add .
+ 1098  git status
+ 1099  git commit -m "codes modifed and simpled the implementation"
+ 1100  git push  origin master
+ 1101  git rm --cached -r sample_training/
+ 1102  git status
+ 1103  git add .
+ 1104  git commit -m "gitignore modified"
+ 1105  git push  origin master
+ 1106  python3 mongodb_task.py > res.txt
+ 1107  docker stop my_mongo
+ 1108  docker-compose up -d
+ 1109  python3 mongodb_task.py > res.txt
+ 1110  python3 mongodb-connection.py > result.txt
+ 1111  git status
+ 1112  git add .
+ 1113  sudo chown -R ubuntu:ubuntu sample_training/
+ 1114  sudo chmod -R u+w sample_training/
+ 1115  git add .
+ 1116  git commit -m "res files modified"
+ 1117  git push origin master
+ 1118  df -h
+ 1119  python3
+ 1120  pip3 install fastapi httptools==0.1.* uvloop uvicorn
+ 1121  mkdir FastAPI-Practice-Tasks
+ 1122  cd FastAPI-Practice-Tasks/
+ 1123  nano main.py
+ 1124  uvicorn main:api --reload
+ 1125  curl -X GET http://127.0.0.1:8000/    
+ 1126  uvicorn main:app --host 127.0.0.1 --port 8000
+ 1127  uvicorn main:api --host 127.0.0.1 --port 8000
+ 1128  uvicorn main:api --reload
+ 1129  uvicorn practice:api --reload
+ 1130  curl -X POST "http://127.0.0.1:8000/questions/" -H "Authorization: Basic alice:wonderland" -H "Content-Type: application/json" -d '{"use": "math", "subject": ["algebra"], "num_questions": 5}'
+ 1131  curl -X POST "http://127.0.0.1:8000/admin/questions/" -H "Authorization: Basic admin:4dm1N" -H "Content-Type: application/json" -d '{"question": "Sample question?", "subject": "sample", "correct": ["answerA"], "use": "sample_test", "answerA": "Option A", "answerB": "Option B", "answerC": "Option C"}'
+ 1132  curl -X POST "http://127.0.0.1:8000/questions/" -H "Authorization: Basic alice:wonderland" -H "Content-Type: application/json" -d '{"use": "math", "subject": ["algebra"], "num_questions": 5}'
+ 1133  curl -X POST "http://127.0.0.1:8000/admin/add" -H "Authorization: Basic admin:4dm1N" -H "Content-Type: application/json" -d '{"question": "What is 2+2?", "subject": "math", "correct": ["4"], "use": "quiz", "answerA": "3", "answerB": "4", "answerC": "5", "answerD": "6"}'
+ 1134  curl -X POST "http://127.0.0.1:8000/questions/" -H "Authorization: Basic alice:wonderland" -H "Content-Type: application/json" -d '{"use": "math", "subject": ["algebra"], "num_questions": 5}'
+ 1135  cd ..
+ 1136  cd task_other_version/
+ 1137  python3 testing.py 
+ 1138  curl -X POST "http://127.0.0.1:8000/questions/" -H "Authorization: Basic alice:wonderland" -H "Content-Type: application/json" -d '{"use": "math", "subject": ["algebra"], "num_questions": 5}'
+ 1139  # Admin adds a question
+ 1140  curl -X POST "http://127.0.0.1:8000/admin/add" -H "Authorization: Basic admin:4dm1N" -H "Content-Type: application/json" -d '{"question": "What is 2+2?", "subject": "math", "correct": ["4"], "use": "quiz", "answerA": "3", "answerB": "4", "answerC": "5", "answerD": "6"}'
+ 1141  curl -u alice:wonderland "http://127.0.0.1:8000/questions/?use=MCQ&subject=math&number=5"
+ 1142  python3 testing.py 
+ 1143  cd FastAPI-Practice-Tasks/
+ 1144  ls
+ 1145  curl -X GET http://127.0.0.1:8000/    
+ 1146  curl -X GET http://127.0.0.1:8000/
+ 1147  curl -X GET -i http://127.0.0.1:8000/
+ 1148  curl -X GET -i http://127.0.0.1:8000/ 
+ 1149  curl -X POST -i http://127.0.0.1:8000/
+ 1150  curl -X PUT -i http://127.0.0.1:8000/  
+ 1151  curl -X DELETE -i http://127.0.0.1:8000/
+ 1152  curl -X PATCH -i http://127.0.0.1:8000/
+ 1153  curl -X GET -i http://127.0.0.1:8000/other 
+ 1154  curl -X GET -i http://127.0.0.1:8000/no_where 
+ 1155  curl -X GET -i http://127.0.0.1:8000/item/1
+ 1156  curl -X GET -i http://127.0.0.1:8000/item/my_item   
+ 1157  wget https://dst-de.s3.eu-west-3.amazonaws.com/fastapi_en/questions_en.xlsx
+ 1158  pip install openpyxl
+ 1159  ls
+ 1160  mkdir fastapi_task_final
+ 1161  cd fastapi_task_final/
+ 1162  cd data
+ 1163  mkdir data
+ 1164  nano requirements.txt
+ 1165  mkdir app
+ 1166  cd app/
+ 1167  nano main.py
+ 1168  nano auth.py
+ 1169  nano data_loader.py
+ 1170  nano models.py
+ 1171  nano utils.py
+ 1172  mkdir routers
+ 1173  nano routers/questions.py
+ 1174  nano routers/admin.py
+ 1175  cd ..
+ 1176  nano test_commands.txt
+ 1177  ls
+ 1178  uvicorn app.main:app --reload
+ 1179  pip install pandas
+ 1180  uvicorn app.main:app --reload
+ 1181  cd ..
+ 1182  cd task_other_version/
+ 1183  uvicorn main:app --reload
+ 1184  curl -u alice:wonderland "http://127.0.0.1:8000/questions?use=quiz&subjects=math&subjects=science&num_questions=10"
+ 1185  curl -X POST -u admin:4dm1N     -d "question=What is the capital of France?"     -d "subject=geography"     -d "correct=Paris"     -d "use=quiz"     -d "answerA=Berlin"     -d "answerB=Madrid"     -d "answerC=Paris"     -d "answerD=Rome"     http://127.0.0.1:8000/add-question
+ 1186  curl http://127.0.0.1:8000/
+ 1187  curl -X POST -u admin:4dm1N -H "Content-Type: application/json" -d '{
+ 1188      "question": "What is the capital of France?",
+ 1189      "subject": "geography",
+ 1190      "correct": ["Paris"],
+ 1191      "use": "quiz",
+ 1192      "answerA": "Berlin",
+ 1193      "answerB": "Madrid",
+ 1194      "answerC": "Paris",
+ 1195      "answerD": "Rome"
+ 1196  }' http://127.0.0.1:8000/add-question
+ 1197  curl -X POST -u admin:4dm1N -H "Content-Type: application/json" -d '{
+ 1198      "question": "What is the capital of France?",
+ 1199      "subject": "geography",
+ 1200      "correct": ["Paris"],
+ 1201      "use": "quiz",
+ 1202      "answerA": "Berlin",
+ 1203      "answerB": "Madrid",
+ 1204      "answerC": "Paris",
+ 1205      "answerD": "Rome"
+ 1206  }'curl -u alice:wonderland "http://127.0.0.1:8000/questions?use=quiz&subjects=geography&num_questions=5"
+ 1207  curl -u alice:wonderland "http://127.0.0.1:8000/questions?use=quiz&subjects=geography&num_questions=5"
+ 1208  curl -X POST -u admin:4dm1N -H "Content-Type: application/json" -d '{
+ 1209      "question": "What is the capital of France?",
+ 1210      "subject": "geography",
+ 1211      "correct": ["Paris"],
+ 1212      "use": "quiz",
+ 1213      "answerA": "Berlin",
+ 1214      "answerB": "Madrid",
+ 1215      "answerC": "Paris",
+ 1216      "answerD": "Rome"
+ 1217  }' http://127.0.0.1:8000/add-question
+ 1218  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1219      "use": "quiz",
+ 1220      "subjects": ["Math", "Science"],
+ 1221      "count": 5
+ 1222  }'
+ 1223  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1224      "question": "What is the capital of France?",
+ 1225      "subject": "Geography",
+ 1226      "correct": "Paris",
+ 1227      "use": "quiz",
+ 1228      "answerA": "Paris",
+ 1229      "answerB": "London",
+ 1230      "answerC": "Berlin",
+ 1231      "answerD": "Madrid"
+ 1232  }'
+ 1233  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1234      "question": "What is the capital of France?",
+ 1235      "subject": "Geography",
+ 1236      "correct": "Paris",
+ 1237      "use": "quiz",
+ 1238      "answerA": "Paris",
+ 1239      "answerB": "London",
+ 1240      "answerC": "Berlin",
+ 1241      "answerD": "Madrid"
+ 1242  }'
+ 1243  curl -X GET http://127.0.0.1:8000/
+ 1244  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1245      "use": "quiz",
+ 1246      "subjects": ["Math", "Science"],
+ 1247      "count": 5
+ 1248  }'
+ 1249  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1250      "question": "What is the capital of France?",
+ 1251      "subject": "Geography",
+ 1252      "correct": "Paris",
+ 1253      "use": "quiz",
+ 1254      "answerA": "Paris",
+ 1255      "answerB": "London",
+ 1256      "answerC": "Berlin",
+ 1257      "answerD": "Madrid"
+ 1258  }'
+ 1259  curl -X GET "http://127.0.0.1:8000/questions/" -H "Authorization: Basic YWRtaW46NGRtMU4="
+ 1260  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1261      "question": "What is the capital of France?",
+ 1262      "subject": "Geography",
+ 1263      "correct": "Paris",
+ 1264      "use": "quiz",
+ 1265      "answerA": "Paris",
+ 1266      "answerB": "London",
+ 1267      "answerC": "Berlin",
+ 1268      "answerD": "Madrid"
+ 1269  }'
+ 1270  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1271      "use": "quiz",
+ 1272      "subjects": ["Math", "Science"],
+ 1273      "count": 5
+ 1274  }'
+ 1275  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1276      "use": "quiz",
+ 1277      "subjects": ["Math", "Science"],
+ 1278      "count": 5
+ 1279  }'
+ 1280  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1281      "use": "quiz",
+ 1282      "subjects": ["Math", "Science"],
+ 1283      "count": 5
+ 1284  }'
+ 1285  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1286      "use": "quiz",
+ 1287      "subjects": ["Math", "Science"],
+ 1288      "count": 5
+ 1289  }'
+ 1290  curl -u alice:wonderland "http://127.0.0.1:8000/questions?use=quiz&subjects=math&subjects=science&num_questions=10"
+ 1291  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1292      "question": "What is the capital of France?",
+ 1293      "subject": "Geography",
+ 1294      "correct": "Paris",
+ 1295      "use": "quiz",
+ 1296      "answerA": "Paris",
+ 1297      "answerB": "London",
+ 1298      "answerC": "Berlin",
+ 1299      "answerD": "Madrid"
+ 1300  }'
+ 1301  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1302      "use": "quiz",
+ 1303      "subjects": ["Math", "Science"],
+ 1304      "count": 5
+ 1305  }'
+ 1306  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1307      "use": "quiz",
+ 1308      "subjects": ["Math", "Science"],
+ 1309      "count": 5
+ 1310  }'
+ 1311  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1312      "use": "quiz",
+ 1313      "subjects": ["Math", "Science"],
+ 1314      "count": 5
+ 1315  }'
+ 1316  curl -X GET "http://127.0.0.1:8000/questions/" -H "Authorization: Basic YWRtaW46NGRtMU4="
+ 1317  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1318      "use": "quiz",
+ 1319      "subjects": ["Math", "Science"],
+ 1320      "count": 5
+ 1321  }'
+ 1322  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1323      "use": "quiz",
+ 1324      "subjects": ["Math", "Science"],
+ 1325      "count": 5
+ 1326  }'
+ 1327  cd FastAPI-Practice-Tasks/fastapi_task_final/
+ 1328  ls
+ 1329  cd app/
+ 1330  wget https://dst-de.s3.eu-west-3.amazonaws.com/fastapi_en/questions_en.xlsx     
+ 1331  cd ..
+ 1332  uvicorn app.main:app --reload
+ 1333  ls
+ 1334  nano load_data.py
+ 1335  python3 load_data.py 
+ 1336  uvicorn app.main:app --reload
+ 1337  uvicorn app:app --reload
+ 1338  ls
+ 1339  uvicorn app:app --reload
+ 1340  cd app/
+ 1341  uvicorn app:app --reload
+ 1342  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1343      "use": "quiz",
+ 1344      "subjects": ["Math", "Science"],
+ 1345      "count": 5
+ 1346  }'
+ 1347  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1348      "question": "What is 2 + 2?",
+ 1349      "subject": "Math",
+ 1350      "correct": "4",
+ 1351      "use": "quiz",
+ 1352      "answerA": "4",
+ 1353      "answerB": "3",
+ 1354      "answerC": "5",
+ 1355      "answerD": "6"
+ 1356  }'
+ 1357  curl -X GET "http://127.0.0.1:8000/questions/" -H "Authorization: Basic YWRtaW46NGRtMU4="
+ 1358  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1359      "question": "What is 2 + 2?",
+ 1360      "subject": "Math",
+ 1361      "correct": "4",
+ 1362      "use": "quiz",
+ 1363      "answerA": "4",
+ 1364      "answerB": "3",
+ 1365      "answerC": "5",
+ 1366      "answerD": "6"
+ 1367  }'
+ 1368  curl -X POST "http://127.0.0.1:8000/add-question/" > -H "Content-Type: application/json" > -H "Authorization: Basic YWRtaW46NGRtMU4=" > -d '{
+ 1369  >     "question": "What is the capital of France?",
+ 1370  >     "subject": "Geography",
+ 1371  >     "correct": "Paris",
+ 1372  >     "use": "quiz",
+ 1373  >     "answerA": "Paris",
+ 1374  >     "answerB": "London",
+ 1375  >     "answerC": "Berlin",
+ 1376  >     "answerD": "Madrid"
+ 1377  > }'
+ 1378  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1379      "question": "What is the capital of France?",
+ 1380      "subject": "Geography",
+ 1381      "correct": "Paris",
+ 1382      "use": "quiz",
+ 1383      "answerA": "Paris",
+ 1384      "answerB": "London",
+ 1385      "answerC": "Berlin",
+ 1386      "answerD": "Madrid"
+ 1387  }'
+ 1388  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1389      "use": "quiz",
+ 1390      "subjects": ["Math", "Science"],
+ 1391      "count": 5
+ 1392  }'
+ 1393  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1394      "use": "quiz",
+ 1395      "subjects": ["Math", "Science"],
+ 1396      "count": 5
+ 1397  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1398      "use": "quiz",
+ 1399      "subjects": ["Math", "Science"],
+ 1400      "count": 5
+ 1401  }'
+ 1402  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1403      "use": "quiz",
+ 1404      "subjects": ["Math", "Science"],
+ 1405      "count": 5
+ 1406  }'
+ 1407  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1408      "use": "quiz",
+ 1409      "subjects": ["Math", "Science"],
+ 1410      "count": 5
+ 1411  }'
+ 1412  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1413      "question": "What is 2 + 2?",
+ 1414      "subject": "Math",
+ 1415      "correct": "4",
+ 1416      "use": "quiz",
+ 1417      "answerA": "4",
+ 1418      "answerB": "3",
+ 1419      "answerC": "5",
+ 1420      "answerD": "6"
+ 1421  }'
+ 1422  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1423      "use": "quiz",
+ 1424      "subjects": ["Geography"],
+ 1425      "count": 1
+ 1426  }'
+ 1427  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1428      "question": "What is the capital of France?",
+ 1429      "subject": "Geography",
+ 1430      "correct": "Paris",
+ 1431      "use": "quiz",
+ 1432      "answerA": "Paris",
+ 1433      "answerB": "London",
+ 1434      "answerC": "Berlin",
+ 1435      "answerD": "Madrid"
+ 1436  }'
+ 1437  curl -X POST -u admin:4dm1N     -d "question=What is the capital of France?"     -d "subject=geography"     -d "correct=Paris"     -d "use=quiz"     -d "answerA=Berlin"     -d "answerB=Madrid"     -d "answerC=Paris"     -d "answerD=Rome"     http://127.0.0.1:8000/add-question
+ 1438  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1439      "question": "What is the capital of France?",
+ 1440      "subject": "Geography",
+ 1441      "correct": "Paris",
+ 1442      "use": "quiz",
+ 1443      "answerA": "Paris",
+ 1444      "answerB": "London",
+ 1445      "answerC": "Berlin",
+ 1446      "answerD": "Madrid"
+ 1447  }'
+ 1448  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1449      "use": "quiz",
+ 1450      "subjects": ["Geography"],
+ 1451      "count": 1
+ 1452  }'
+ 1453  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1454      "use": "quiz",
+ 1455      "subjects": ["Geography"],
+ 1456      "count": 1
+ 1457  }'
+ 1458  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1459      "use": "quiz",
+ 1460      "subjects": ["Geography"],
+ 1461      "count": 1
+ 1462  }'
+ 1463  cd
+ 1464  cd FastAPI-Python/
+ 1465  ls
+ 1466  git status
+ 1467  git add .
+ 1468  git commit -m 'sql_exam Answers Updated'
+ 1469  git push origin master
+ 1470  pip install python-multipart
+ 1471  cd FastAPI-Practice-Tasks/fastapi_task_final/app/
+ 1472  uvicorn app:app --reload
+ 1473  cd 
+ 1474  cd FastAPI-Practice-Tasks/version-1
+ 1475  ls
+ 1476  uvicorn app:app --reload
+ 1477  cd ..
+ 1478  cd
+ 1479  mv FastAPI-Practice-Tasks FastAPI-Python
+ 1480  cd FastAPI-Python/
+ 1481  ls
+ 1482  nano .gitignore
+ 1483  git init
+ 1484  git add .
+ 1485  git remote add origin git@github.com:sshsurabhi/FastAPI-Python.git
+ 1486  git commit -m "first commit"
+ 1487  git push -u origin main
+ 1488  git push origin main
+ 1489  rm -rf .git
+ 1490  nano .gitignore
+ 1491  git init
+ 1492  git commit -m "first commit"
+ 1493  git add .
+ 1494  git commit -m "first commit"
+ 1495  git remote add origin git@github.com:sshsurabhi/FastAPI-Python.git
+ 1496  git push origin master
+ 1497  cd version-1
+ 1498  uvicorn app:app --reload
+ 1499  git status
+ 1500  git add .
+ 1501  git commit -m "Test Commands Updated"
+ 1502  git push origin master
+ 1503  cd ..
+ 1504  git status
+ 1505  cd
+ 1506  cd Ansible-Practice/
+ 1507  ls
+ 1508  python3 instance-state.py 
+ 1509  cd Ansible-Practice/
+ 1510  ls
+ 1511  python3 instance-state.py 
+ 1512  cd FastAPI-Python/
+ 1513  ls
+ 1514  nano .gitignore
+ 1515  git status
+ 1516  git add .
+ 1517  git commit -mPython test, and Data Accultration Documents has been updated"
+ 1518  git commit -m "Python test, and Data Accultration Documents has been updated"
+ 1519  git push origin master
+ 1520  cd version-2
+ 1521  ls
+ 1522  uvicorn main:app --reload
+ 1523  git status
+ 1524  cd ..
+ 1525  git commit -m "Test Commands has been updated"
+ 1526  git add .
+ 1527  git commit -m "Test Commands has been updated"
+ 1528  git push origin master
+ 1529  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1530      "question": "What is 2 + 2?",
+ 1531      "subject": "Math",
+ 1532      "correct": "4",
+ 1533      "use": "quiz",
+ 1534      "answerA": "4",
+ 1535      "answerB": "3",
+ 1536      "answerC": "5",
+ 1537      "answerD": "6"
+ 1538  }
+ 1539  curl -X POST "http://127.0.0.1:8000/add-question/" -H "Content-Type: application/json" -H "Authorization: Basic YWRtaW46NGRtMU4=" -d '{
+ 1540      "question": "What is 2 + 2?",
+ 1541      "subject": "Math",
+ 1542      "correct": "4",
+ 1543      "use": "quiz",
+ 1544      "answerA": "4",
+ 1545      "answerB": "3",
+ 1546      "answerC": "5",
+ 1547      "answerD": "6"
+ 1548  }
+ 1549  curl -X GET "http://127.0.0.1:8000/questions/" -H "Authorization: Basic YWRtaW46NGRtMU4="
+ 1550  curl -X POST "http://127.0.0.1:8000/get-questions/" -H "Content-Type: application/json" -H "Authorization: Basic YWxpY2U6d29uZGVybGFuZA==" -d '{
+ 1551      "use": "quiz",
+ 1552      "subjects": ["Math", "Science"],
+ 1553      "count": 5
+ 1554  }'
+ 1555  mv petclinic-iac-main-harsha petclinic-iac-main
+ 1556  cd petclinic-iac-main/
+ 1557  git status
+ 1558  nano README.md
+ 1559  git status
+ 1560  git add .
+ 1561  git commit -m 'README added'
+ 1562  git push
+ 1563  git push origin master
+ 1564  git status
+ 1565  git add .
+ 1566  git commit -m 'README updated'
+ 1567  git push origin master
+ 1568  git add .
+ 1569  git commit -m 'README updated'
+ 1570  git push origin master
+ 1571  git add .
+ 1572  git commit -m 'README updated'
+ 1573  git push origin master
+ 1574  git add .
+ 1575  git commit -m 'README updated'
+ 1576  git push origin master
+ 1577  cd
+ 1578  git clone https://github.com/sshsurabhi/Petclinic-Helm-Chart-K8S.git
+ 1579  git add .
+ 1580  git commit -m 'README updated'
+ 1581  cd Petclinic-Helm-Chart-K8S/
+ 1582  git status
+ 1583  git add .
+ 1584  git commit -m 'README updated'
+ 1585  git push origin master
+ 1586  git push origin main
+ 1587  git push origin master
+ 1588  git config user.name
+ 1589  git config user.email
+ 1590  git status
+ 1591  git push origin master
+ 1592  git remote -v
+ 1593  git credential-cache exit
+ 1594  git push origin master
+ 1595  git push
+ 1596  git status
+ 1597  git add .
+ 1598  git commit -m 'README updated'
+ 1599  git push
+ 1600  git remote set-url origin git@github.com:sshsurabhi/Petclinic-Helm-Chart-K8S.git
+ 1601  git push
+ 1602  cd
+ 1603  df -h
+ 1604  sudo apt update
+ 1605  sudo apt upgrade
+ 1606  sudo apt autoremove -y
+ 1607  sudo apt autoclean -y
+ 1608  sudo apt clean
+ 1609  cd
+ 1610  df -h
+ 1611  ls
+ 1612  cd Ansible-Practice/
+ 1613  python3 instance-state.py 
+ 1614  which ansible
+ 1615  cd
+ 1616  which ansible
+ 1617  ansible --version
+ 1618  sudo apt-get install software-properties-common
+ 1619  sudo apt-add-repository --yes --update ppa:ansible/ansible
+ 1620  sudo apt-get install ansible
+ 1621  pip uninstall pymongo
+ 1622  pip list
+ 1623  sudo apt-get install ansible
+ 1624  sudo dpkg --configure -a
+ 1625  sudo apt-get install ansible
+ 1626  which ansible
+ 1627  ansible --version
+ 1628  df -h
+ 1629  cd Ansible-Practice/
+ 1630  ansible-doc apt
+ 1631  nano /etc/ansible/hosts
+ 1632  cd Ansible-Practice/
+ 1633  nano inventory.yml
+ 1634  mkdir dst
+ 1635  nano inventory.ini
+ 1636  rm dst
+ 1637  rm rf dst
+ 1638  rm -rf dst
+ 1639  ls
+ 1640  nano inventory.ini
+ 1641  ls
+ 1642  ansible-inventory --list -i inventory.ini
+ 1643  ansible-inventory -i inventory.ini --graph
+ 1644  ansible-inventory -i inventory.ini -y --list > inventory.yml
+ 1645  nano ansible.cfg
+ 1646  ansible all -i inventory.yml -m ping
+ 1647  ping 172.16.1.217
+ 1648  ping 172.16.1.25
+ 1649  ansible all -i inventory.yml -m ping -vvvv
+ 1650  ls
+ 1651  ansible all -i inventory.yml -m ping
+ 1652  which ansible
+ 1653  ansible --version
+ 1654  ansible all -i inventory.yml -m ping
+ 1655  ansible all -i inventory.ini -m ping
+ 1656  ansible all -i inventory.yml -m ping
+ 1657  ansible all -i inventory.ini -m ping
+ 1658  nc -zv 172.16.1.217 22
+ 1659  chmod 400 /home/ubuntu/Ansible-Practice/Ansible-KeyPair-New.pem
+ 1660  ansible all -i inventory.ini -m ping
+ 1661  ansible all -i inventory.yml -m ping
+ 1662  ansible-inventory -i inventory.ini -y --list > inventory.yml
+ 1663  ansible all -i inventory.yml -m ping
+ 1664  ansible-inventory -i inventory.ini -y --list > inventory.yml
+ 1665  ansible all -i inventory.yml -m ping
+ 1666  ansible all -i inventory.ini -m ping
+ 1667  touch datascientest.txt
+ 1668  ansible all -i inventory.yml -m copy -a "src=datascientest.txt dest=/home/datascientest"
+ 1669  ansible all -i inventory.yml -m copy -a "src=datascientest.txt dest=/home/dubuntu"
+ 1670  ansible all -i inventory.yml -m copy -a "src=datascientest.txt dest=/home/datascientest"
+ 1671  ls -ld /home/datascientest
+ 1672  sudo chown ubuntu:ubuntu /home/datascientest
+ 1673  ansible all -i inventory.yml -m file -a "path=/home/datascientest state=directory owner=ubuntu group=ubuntu mode=0755" -b
+ 1674  ansible all -i inventory.yml -m copy -a "src=datascientest.txt dest=/home/datascientest" -b
+ 1675  nano commands.txt
+ 1676  ansible all -a "df -h" -i inventory.yml
+ 1677  ansible client-dev -a "uptime" -i inventory.yml
+ 1678  ansible client-test -a "free -m" -i inventory.yml
+ 1679  ansible client-prod -a "date" -i inventory.yml
+ 1680  cd playbook
+ 1681  mkdir playbook
+ 1682  cd playbook
+ 1683  nano datascientest-playbook.yml
+ 1684  rm -f datascientest-playbook.yml 
+ 1685  nano datascientest-playbook.yml
+ 1686  wget https://dst-de.s3.eu-west-3.amazonaws.com/ansible_fr/index.html
+ 1687  ls
+ 1688  nano inventory.yml
+ 1689  ansible-playbook -i inventory.yml datascientest-playbook.yml
+ 1690  ansible-inventory -i inventory.ini -y --list > inventory.yml
+ 1691  ansible-playbook -i inventory.yml datascientest-playbook.yml
+ 1692  su postgres
+ 1693  su postgressql
+ 1694  ansible-playbook -i inventory.yml datascientest-playbook.yml --limit serverdatabase1.datascientest.com
+ 1695  su postgressql
+ 1696  cd ..
+ 1697  mkdir group_vars
+ 1698  cd group_vars/
+ 1699  nano serverweb.yml
+ 1700  nano serverdatabase.yml
+ 1701  inventory.yml
+ 1702  nano inventory.yml
+ 1703  nano all.yml
+ 1704  cd ..
+ 1705  mkdir host_vars
+ 1706  cd host_vars/
+ 1707  nano serverweb1.datascientest.en.yml
+ 1708  nano serverdatabase1.datascientest.en
+ 1709  tree
+ 1710  cd ..
+ 1711  cd group_vars/
+ 1712  ls
+ 1713  cd ..
+ 1714  mkdir Ansible_Variables
+ 1715  cd Ansible-Practice/
+ 1716  ls
+ 1717  root@serveurdatabase1.datascientest.com
+ 1718  3.253.100.143@serveurdatabase1.datascientest.com
+ 1719  ssh 3.253.100.143@serveurdatabase1.datascientest.com
+ 1720  cd Ansible_Variables/
+ 1721  ssh 3.253.100.143@serveurdatabase1.datascientest.com
+ 1722  ls
+ 1723  ansible-inventory -i inventory.yml --graph
+ 1724  ansible all -i inventory.yml -m ping
+ 1725  ansible-inventory -i inventory.yml --graph
+ 1726  ansible all -i inventory.yml -m ping
+ 1727  ls
+ 1728  rm -f inventory.ini 
+ 1729  ls
+ 1730  ansible all -i inventory.yml -m ping
+ 1731  ansible-playbook -i inventory.yml -e ansible_user=datascientest datascientest-playbook.yml
+ 1732  cd ..
+ 1733  ansible all -i inventory.yml -m ping
+ 1734  cd Ansible_Variables/
+ 1735  ansible all -i inventory.yml -m ping
+ 1736  ansible-playbook -i inventory.yml -e ansible_user=datascientest datascientest-playbook.yml
+ 1737  ansible-playbook -i inventory.yml -e ansible_user=ubuntu datascientest-playbook.yml
+ 1738  ansible all -i inventory.yml -m ping -vvv
+ 1739  ansible-playbook -i inventory.yml -e ansible_user=ubuntu datascientest-playbook.yml -vvv
+ 1740  ansible-playbook -i inventory.yml -e ansible_user=ubuntu datascientest-playbook.yml
+ 1741  ls
+ 1742  cd Ansible-Practice/Ansible_Variables/
+ 1743  cd ..
+ 1744  ls
+ 1745  mkdir Ansible_facts
+ 1746  cd Ansible_facts/
+ 1747  cd ..
+ 1748  mv Ansible_facts Ansible_Tags
+ 1749  cd Ansible_Tags/
+ 1750  nano datascientest-playbook.yml
+ 1751  ansible-playbook -i inventory.yml --tags web datascientest-playbook.yml
+ 1752  cp index.html index.php
+ 1753  ansible-playbook -i inventory.yml --tags web datascientest-playbook.yml
+ 1754  ansible-playbook -i inventory.yml --skip-tags web datascientest-playbook.yml
+ 1755  ansible-playbook -i inventory.yml --list-tags datascientest-playbook.yml
+ 1756  ansible-playbook -i inventory.yml --tags db datascientest-playbook.yml
+ 1757  cd ..
+ 1758  mkdir Ansible_Jinja2
+ 1759  cd Ansible_Jinja2
+ 1760  mkdir templates
+ 1761  cd templates/
+ 1762  nano index.html.j2
+ 1763  cd ..
+ 1764  ls
+ 1765  mkdir group_vars
+ 1766  ls
+ 1767  tree
+ 1768  df -h
+ 1769  ls
+ 1770  ls models/
+ 1771  touch apache.yml
+ 1772  ansible-playbook -i inventory.yml apache2.yml
+ 1773  ansible-playbook -i inventory.yml apache.yml
+ 1774  cd ..
+ 1775  mkdir wordpress-excercise
+ 1776  cd wordpress-excercise/
+ 1777  mkdir group_vars host_vars models
+ 1778  ls
+ 1779  touch group_vars/production.yml
+ 1780  touch host_vars/serverweb1.datascientest.en.yml
+ 1781  touch models/nginx-vhost.j2
+ 1782  touch models/wp-config.php.j2
+ 1783  touch install_wordpress.yml
+ 1784  touch inventory.yml
+ 1785  touch mysql.yml
+ 1786  touch nginx.yml
+ 1787  touch wordpress.yml
+ 1788  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1789  pip install --upgrade ansible
+ 1790  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1791  pip uninstall ansible
+ 1792  pip install ansible
+ 1793  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1794  df -h
+ 1795  pip install --upgrade ansible
+ 1796  sudo apu autoremove -y
+ 1797  sudo apt autoremove -y
+ 1798  sudo aptt-getautoremove -y
+ 1799  sudo aptt-get autoremove -y
+ 1800  sudo apt-get autoremove -y
+ 1801  sudo apt-get autoclean -y
+ 1802  sudo apt-get clean -y
+ 1803  pip install --upgrade ansible
+ 1804  cd ..
+ 1805  cd Ansible-Practice/
+ 1806  ls
+ 1807  ggit init
+ 1808  git init
+ 1809  git add .
+ 1810  git remote add origin git@gitlab.com:gitlab-group-ds-devops/ansible-practice.git
+ 1811  git commit -m "Initial commit"
+ 1812  git push origin main
+ 1813  git push origin master
+ 1814  rm -rf .git
+ 1815  git init
+ 1816  git remote add origin git@github.com:sshsurabhi/Ansible-Practice.git
+ 1817  git commit -m "first commit"
+ 1818  git add .
+ 1819  git commit -m "first commit"
+ 1820  git push origin master
+ 1821  git push origin main
+ 1822  git push -u origin master
+ 1823  git rm --cached --ignore-unmatch instance-state.py"
+ 1824  git rm --cached --ignore-unmatch instance-state.py
+ 1825  git commit -m "first commit"
+ 1826  git push -u origin master
+ 1827  git push origin master
+ 1828  git rm --cached --ignore-unmatch instance-state.py
+ 1829  git push origin master
+ 1830  rm -rf .git
+ 1831  git init
+ 1832  git remote add origin git@github.com:sshsurabhi/Ansible-Practice.git
+ 1833  git add .
+ 1834  git commit -m "first commit"
+ 1835  git push origin master
+ 1836  git filter-repo --path instance-state.py --invert-paths
+ 1837  git push --force origin master
+ 1838  rm -rf .git
+ 1839  git init
+ 1840  git add .
+ 1841  git remote add origin git@github.com:sshsurabhi/Ansible-Practice.git
+ 1842  git commit -m "first commit"
+ 1843  git push origin master
+ 1844  rm -rf .git
+ 1845  nano .gitignore
+ 1846  git init
+ 1847  git remote add origin git@github.com:sshsurabhi/Ansible-Practice.git
+ 1848  git add .
+ 1849  git commit -m "first commit"
+ 1850  git push origin master
+ 1851  ls
+ 1852  git init
+ 1853  git add .
+ 1854  git commit -m "first commit"
+ 1855  git remote add origin git@github.com:sshsurabhi/Ansible-Practice.git
+ 1856  git push origin master
+ 1857  rm -rf .git
+ 1858  git init
+ 1859  git add .
+ 1860  git remote add origin git@github.com:sshsurabhi/Ansible-Practice.git
+ 1861  git commit -m "first commit"
+ 1862  git push origin master
+ 1863  ls
+ 1864  rm -rf Ansible_Tags Ansible_Variables playbook Ansible_Jinja2 
+ 1865  ls
+ 1866  pip install --upgrade ansible
+ 1867  du -ah / | sort -hr | head -n 20
+ 1868  sudo du -ah / | sort -hr | head -n 20
+ 1869  history>history.txt
+ 1870  ls
+ 1871  sudo /usr/local/bin/k3s-uninstall.sh
+ 1872  df -h
+ 1873  pip install --upgrade ansible
+ 1874  cd wordpress-excercise/
+ 1875  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1876  python --version
+ 1877  python3 --version
+ 1878  pip install --upgrade requests urllib3
+ 1879  pip show botocore
+ 1880  pip install urllib3==1.26.16
+ 1881  pip install --upgrade requests
+ 1882  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1883  pip install ansible requests urllib3
+ 1884  pip show urllib3
+ 1885  pip check
+ 1886  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1887  pip show requests urllib3
+ 1888  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1889  pip install --upgrade requests urllib3
+ 1890  sudo apt update
+ 1891  sudo apt upgrade
+ 1892  python -c "import ssl; print(ssl.OPENSSL_VERSION)"
+ 1893  python3 -c "import ssl; print(ssl.OPENSSL_VERSION)"
+ 1894  ansible --version
+ 1895  pip install --upgrade requests urllib3
+ 1896  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1897  curl -I https://wordpress.org/wordpress-5.7.1.tar.gz
+ 1898  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1899  sudo apt-get update
+ 1900  sudo apt-get install ca-certificates
+ 1901  wget https://wordpress.org/wordpress-5.7.1.tar.gz
+ 1902  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1903  sudo pip3 install --upgrade pip requests
+ 1904  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1905  curl http://51.44.97.251/
+ 1906  cd ..
+ 1907  mkdir ansible-roles
+ 1908  cd ansible-roles/
+ 1909  ansible-galaxy init wordpress
+ 1910  tree
+ 1911  df -h
+ 1912  nano install_wordpress.yml
+ 1913  cd ..
+ 1914  ls
+ 1915  cd ansible_roles/
+ 1916  ls
+ 1917  nano inventory.yml
+ 1918  ls
+ 1919  cd roles/
+ 1920  ls
+ 1921  cd ..
+ 1922  ls
+ 1923  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1924  sudo systemctl status nginx.service
+ 1925  ssh 51.44.97.251
+ 1926  ssh@51.44.97.251
+ 1927  ssh ubuntu@serverweb1.datascientest.com
+ 1928  ssh ubuntu@51.44.97.251
+ 1929  ssh -i /home/ubuntu/Ansible-Practice/Ansible-KeyPair-New.pem  ubuntu@51.44.97.251
+ 1930  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1931  ssh -i /home/ubuntu/Ansible-Practice/Ansible-KeyPair-New.pem  ubuntu@51.44.97.251
+ 1932  ansible-playbook -i inventory.yml install_wordpress.yml
+ 1933  ansible-galaxy install --roles-path . role-name
+ 1934  ansible-galaxy search nginx
+ 1935  cd ..
+ 1936  ls
+ 1937  mkdir ansble_vault
+ 1938  mv  ansble_vault vault_ansible
+ 1939  cd vault_ansible/
+ 1940  ansible-vault create myfile.yml
+ 1941  cat myfile.yml
+ 1942  ansible-vault encrypt myfile.yml
+ 1943  ansible-vault view myfile.yml
+ 1944  cd ..
+ 1945  cd ansible_roles/
+ 1946  ls
+ 1947  ansible-vault encrypt group_vars/production.yml
+ 1948  cat myfile.yml
+ 1949  cat ~/myfile.yml
+ 1950  cat ~/Ansible-Practice/vault_ansible/myfile.yml
+ 1951  ansible-playbook -i inventory.yml install_wordpress.yml --ask-vault-pass
+ 1952  cd Ansible-Practice/
+ 1953  ls
+ 1954  mkdir molecule
+ 1955  cd molecule/
+ 1956  sudo apt-get update
+ 1957  sudo apt install -y libssl-dev
+ 1958  python3 -m pip install molecule ansible-core molecule-docker
+ 1959  export PATH="$HOME/.local/bin:$PATH"
+ 1960  ls
+ 1961  molecule init role datascientest.nginx --driver-name=docker --verifier-name=testinfra
+ 1962  ansible-galaxy init roledatascientest && cd roledatascientest
+ 1963  molecule init scenario --driver-name docker --verifier-name=testinfra
+ 1964  ls molecule/default/
+ 1965  cd ..
+ 1966  molecule create
+ 1967  cd roledatascientest/
+ 1968  molecule create
+ 1969  molecule list
+ 1970  docker ps
+ 1971  molecule converge
+ 1972  molecule login -h instance
+ 1973  find test_default.py
+ 1974  pip3 install pytest-testinfra
+ 1975  molecule verify
+ 1976  molecule converge
+ 1977  molecule verify
+ 1978  molecule test
+ 1979  molecule converge
+ 1980  molecule verify
+ 1981  molecule test
+ 1982  molecule destroy
+ 1983  docker ps
+ 1984  docker ps -a
+ 1985  df -h
+ 1986  cd Ansible-Practice/ansible_roles/
+ 1987  ls
+ 1988  ls /home/ubuntu/Ansible-Practice/
+ 1989  tree
+ 1990  cd ..
+ 1991  mkdir deploy_task
+ 1992  cd deploy_task/
+ 1993  mkdir roles
+ 1994  cd roles
+ 1995  df -h
+ 1996  sudo apt autoremove
+ 1997  sudo apt autoclean
+ 1998  sudo apt clean
+ 1999  molecule --version
+ 2000  pip list
+ 2001  cd Ansible-Practice/
+ 2002  ls
+ 2003  cd deploy_task/
+ 2004  ansible-galaxy init magento
+ 2005  ansible-galaxy init mysql
+ 2006  nano inventory.yml
+ 2007  ls
+ 2008  ansible -i inventory.yml all -m ping
+ 2009  ls
+ 2010  ansible -i inventory.yml all -m ping
+ 2011  ansible-playbook -i inventory.yml site.yml
+ 2012  ansible-playbook -i inventory.yml playbook.yml
+ 2013  ansible-playbook -i inventory.yml playbook.yml --extra-vars "mysql_service_name=mysql" -vvv
+ 2014  ansible-playbook -i inventory.yml playbook.yml
+ 2015  cd roles/magento/
+ 2016  molecule init scenario default -d docker
+ 2017  cd ..
+ 2018  cd mysql/
+ 2019  molecule init scenario default -d docker
+ 2020  molecule test
+ 2021  cd ..
+ 2022  cd magento/
+ 2023  molecule test
+ 2024  ansible-galaxy role init --force
+ 2025  cd ..
+ 2026  cd mysql/
+ 2027  ansible-galaxy role init --force
+ 2028  molecule test
+ 2029  cd ..
+ 2030  cd magento/
+ 2031  molecule test
+ 2032  molecule test | tee molecule_logs.txt
+ 2033  cd ..
+ 2034  cd mysql/
+ 2035  molecule_logs.txt
+ 2036  molecule test | tee molecule_logs.txt
+ 2037  cd ..
+ 2038  cd roles/
+ 2039  ls
+ 2040  cd ..
+ 2041  zip -r deploy_task.zip 
+ 2042  zip -r deploy_task.zip deploy_task/roles/magento deploy_task/roles/mysql deploy_task/inventory.yml deploy_task/playbook.yml 
+ 2043  cd deploy_task/
+ 2044  ls
+ 2045  ansible-playbook -i inventory.yml playbook.yml -vvv
+ 2046  cd
+ 2047  mv Ansible-Practice Ansible-Practice_1
+ 2048  git clone https://github.com/sshsurabhi/Ansible-Practice.git
+ 2049  cd Ansible-Practice
+ 2050  history>history.txt

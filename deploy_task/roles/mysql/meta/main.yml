@@ -1,0 +1,21 @@
+galaxy_info:
+  role_name: mysql
+  namespace: my_namespace  # Replace with your own namespace, e.g., company or GitHub username
+  author: your_name         # Replace with your name
+  description: MySQL role for deployment
+  company: Your Company Name
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+    - name: Debian
+      versions:
+        - 10
+        - 11
+  categories:
+    - database
+
+dependencies: []

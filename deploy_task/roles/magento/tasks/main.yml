@@ -1,0 +1,37 @@
+---
+- name: Install required packages on Debian-based systems
+  ansible.builtin.apt:
+    name:
+      - apache2
+      - php
+      - php-mysql
+      - wget
+      - unzip
+    state: present
+    update_cache: yes
+  when: ansible_facts.pkg_mgr == "apt"
+
+- name: Install required packages on RHEL-based systems
+  ansible.builtin.yum:
+    name:
+      - httpd
+      - php
+      - php-mysqlnd
+      - wget
+      - unzip
+    state: present
+  when: ansible_facts.pkg_mgr == "yum"
+
+- name: Start Apache (Debian-based systems)
+  ansible.builtin.service:
+    name: apache2
+    state: started
+    enabled: true
+  when: ansible_facts.pkg_mgr == "apt"
+
+- name: Start Apache (RHEL-based systems)
+  ansible.builtin.service:
+    name: httpd
+    state: started
+    enabled: true
+  when: ansible_facts.pkg_mgr == "yum"

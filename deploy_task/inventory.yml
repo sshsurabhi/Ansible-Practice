@@ -1,0 +1,21 @@
+all:
+  children:
+    # datascientest_app:
+    # children:
+    web:
+      hosts:
+        magento-server:
+          ansible_host: 15.236.134.175
+          # ansible_password: Datascientest2022
+          ansible_ssh_private_key_file: /home/ubuntu/Ansible-Practice/Ansible-KeyPair-New.pem
+          ansible_user: ubuntu
+          # env: dev
+    db:
+      hosts:
+        mysql-server:
+          ansible_host: 51.44.97.251
+          # ansible_password: Datascientest2022
+          ansible_ssh_private_key_file: /home/ubuntu/Ansible-Practice/Ansible-KeyPair-New.pem
+          ansible_user: ubuntu
+          # env: prod
+  # ungrouped: {}

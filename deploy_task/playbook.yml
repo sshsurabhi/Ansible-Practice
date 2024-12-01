@@ -1,0 +1,13 @@
+- name: Deploy MySQL
+  hosts: db
+  become: yes
+  roles:
+    - role: mysql
+      vars:
+        mysql_service_name: mysql
+        
+- name: Deploy Magento
+  hosts: web
+  become: yes
+  roles:
+    - magento

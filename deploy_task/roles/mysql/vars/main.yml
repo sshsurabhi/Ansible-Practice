@@ -1,0 +1,7 @@
+---
+# vars file for mysql
+mysql_service_name: mysql
+mysql_root_password: root_password
+magento_db: magento
+magento_user: magento_user
+magento_password: magento_password
