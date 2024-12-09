@@ -2,7 +2,13 @@
 - name: Update apt package index
   ansible.builtin.apt:
     update_cache: yes
-    
+
+- name: Install Python MySQL dependencies
+  ansible.builtin.apt:
+    name:
+      - python3-pymysql
+    state: present
+
 - name: Install MySQL on Debian-based systems
   ansible.builtin.apt:
     name: mysql-server
@@ -14,3 +20,35 @@
     name: "{{ mysql_service_name }}"
     state: started
     enabled: true
+
+- name: Check if MySQL is listening on port 3306
+  ansible.builtin.wait_for:
+    port: 3306
+    state: started
+    timeout: 10
+  register: mysql_port_check
+
+- name: Create MySQL user
+  mysql_user:
+    login_user: root
+    login_password: root  # Change this to the actual password
+    name: ansible_user
+    host: localhost
+    password: admin  # The password you want to set for the ansible_user
+    state: present
+  become: yes
+
+- name: Grant privileges to the MySQL user
+  mysql_user:
+    login_user: root
+    login_password: root  # Change this to the actual password
+    name: ansible_user
+    host: localhost
+    priv: '*.*:ALL'  # Set privileges for the user
+    state: present
+  become: yes
+
+- name: Verify MySQL connection protocol is open on port 3306
+  debug:
+    msg: "MySQL is listening on port 3306."
+  when: mysql_port_check.elapsed < 10
