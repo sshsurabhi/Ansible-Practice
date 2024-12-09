@@ -56,7 +56,7 @@ TASK [Create molecule instance(s)] *********************************************
 
 TASK [Wait for instance(s) creation to complete] *******************************
 [1;30mFAILED - RETRYING: [localhost]: Wait for instance(s) creation to complete (300 retries left).[0m
-[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '717893906206.6575', 'results_file': '/home/ubuntu/.ansible_async/717893906206.6575', 'changed': True, 'item': {'image': 'quay.io/centos/centos:stream8', 'name': 'instance', 'pre_build_image': True}, 'ansible_loop_var': 'item'})[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '928798770563.12605', 'results_file': '/home/ubuntu/.ansible_async/928798770563.12605', 'changed': True, 'item': {'image': 'quay.io/centos/centos:stream8', 'name': 'instance', 'pre_build_image': True}, 'ansible_loop_var': 'item'})[0m
 
 PLAY RECAP *********************************************************************
 [33mlocalhost[0m                  : [32mok=6   [0m [33mchanged=2   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
