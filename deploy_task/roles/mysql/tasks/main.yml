@@ -1,15 +1,13 @@
 ---
+- name: Update apt package index
+  ansible.builtin.apt:
+    update_cache: yes
+    
 - name: Install MySQL on Debian-based systems
   ansible.builtin.apt:
     name: mysql-server
     state: present
   when: ansible_facts.pkg_mgr == "apt"
-
-- name: Install MySQL on RHEL-based systems
-  ansible.builtin.yum:
-    name: mysql-server
-    state: present
-  when: ansible_facts.pkg_mgr == "yum"
 
 - name: Start MySQL service
   ansible.builtin.service:

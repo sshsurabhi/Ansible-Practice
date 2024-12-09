@@ -56,7 +56,7 @@ TASK [Create molecule instance(s)] *********************************************
 
 TASK [Wait for instance(s) creation to complete] *******************************
 [1;30mFAILED - RETRYING: [localhost]: Wait for instance(s) creation to complete (300 retries left).[0m
-[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '756716794146.7944', 'results_file': '/home/ubuntu/.ansible_async/756716794146.7944', 'changed': True, 'item': {'image': 'quay.io/centos/centos:stream8', 'name': 'instance', 'pre_build_image': True}, 'ansible_loop_var': 'item'})[0m
+[33mchanged: [localhost] => (item={'failed': 0, 'started': 1, 'finished': 0, 'ansible_job_id': '742492421640.5447', 'results_file': '/home/ubuntu/.ansible_async/742492421640.5447', 'changed': True, 'item': {'image': 'quay.io/centos/centos:stream8', 'name': 'instance', 'pre_build_image': True}, 'ansible_loop_var': 'item'})[0m
 
 PLAY RECAP *********************************************************************
 [33mlocalhost[0m                  : [32mok=6   [0m [33mchanged=2   [0m unreachable=0    failed=0    [36mskipped=5   [0m rescued=0    ignored=0
@@ -70,18 +70,13 @@ TASK [Gathering Facts] *********************************************************
 
 TASK [Include mysql] ***********************************************************
 
-TASK [mysql : Install MySQL on Debian-based systems] ***************************
-[36mskipping: [instance][0m
-
-TASK [mysql : Install MySQL on RHEL-based systems] *****************************
-[36mskipping: [instance][0m
-
-TASK [mysql : Start MySQL service] *********************************************
+TASK [mysql : Update apt package index] ****************************************
 [1;35m[WARNING]: Collection community.docker does not support Ansible version 2.13.13[0m
-[31mfatal: [instance]: FAILED! => {"changed": false, "msg": "Unable to enable service mysql: Failed to enable unit, unit mysql.service does not exist.\n"}[0m
+[1;35m[WARNING]: Updating cache and auto-installing missing dependency: python3-apt[0m
+[31mfatal: [instance]: FAILED! => {"changed": false, "cmd": "apt-get update", "msg": "[Errno 2] No such file or directory: b'apt-get': b'apt-get'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}[0m
 
 PLAY RECAP *********************************************************************
-[31minstance[0m                   : [32mok=1   [0m changed=0    unreachable=0    [31mfailed=1   [0m [36mskipped=2   [0m rescued=0    ignored=0
+[31minstance[0m                   : [32mok=1   [0m changed=0    unreachable=0    [31mfailed=1   [0m skipped=0    rescued=0    ignored=0
 
 [1;35m[WARNING]: Collection community.docker does not support Ansible version 2.13.13[0m
 
